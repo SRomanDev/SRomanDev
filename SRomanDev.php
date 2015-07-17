@@ -17,6 +17,8 @@ if( ! class_exists( 'SRomanDev' ) ) {
      */
     final class SRomanDev{
         public function __construct(){
+            new SRInit(__FILE__);
+            error_log(SRInit::$textdomain);
         }
         //Активация плагина
         public static function SRPluginActivation(){
