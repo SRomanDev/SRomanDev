@@ -10,6 +10,8 @@ License: A "Slug" license name e.g. GPL2
 */
 if ( ! function_exists( 'add_action' ) ) exit;
 if( ! class_exists( 'SRomanDev' ) ) {
+    require_once dirname(__FILE__).'/includes/SRAutoloader.php';
+    SRAutoloader::init();
     /**
      * Class SRomanDev
      */
