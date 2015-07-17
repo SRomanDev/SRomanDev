@@ -30,7 +30,7 @@ if( ! class_exists( 'SRomanDev' ) ) {
         }
     }
 }
-if( class_exists( 'Travelpayouts' ) ) {
+if( class_exists( 'SRomanDev' ) ) {
     $SRomanDev = new SRomanDev();
     /**
      * Добавляем базовые хуки при активации, деактивации и удалении плагина
