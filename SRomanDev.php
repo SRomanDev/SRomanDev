@@ -7,6 +7,8 @@ Version: 1.0
 Author: SRomanDev
 Author URI: http://URI_Of_The_Plugin_Author
 License: A "Slug" license name e.g. GPL2
+Text Domain: SRomanDev
+Domain Path: /localization/
 */
 if ( ! function_exists( 'add_action' ) ) exit;
 if( ! class_exists( 'SRomanDev' ) ) {
@@ -18,7 +20,13 @@ if( ! class_exists( 'SRomanDev' ) ) {
     final class SRomanDev{
         public function __construct(){
             new SRInit(__FILE__);
-            error_log(SRInit::$textdomain);
+            new SRLocalization();
+            if ( is_admin() ) :
+                new SRControlPanel("admin");
+                else:
+                    endif;
+            //error_log(SRInit::$textdomain);
+            //error_log(__("Hello world", SRInit::$textdomain));
         }
         //Активация плагина
         public static function SRPluginActivation(){
