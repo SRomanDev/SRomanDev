@@ -7,6 +7,7 @@ class SRAutoloader {
          * качестве реализации метода __autoload()
          */
         spl_autoload_register(array($this, 'srIncludes'));
+        spl_autoload_register(array($this, 'srIncludesControlPanel'));
     }
     /** ***/
     public static function init(){
@@ -23,5 +24,11 @@ class SRAutoloader {
             include $classfile;
         }
 
+    }
+    public function srIncludesControlPanel($class){
+        $classfile = dirname(__FILE__).'/control_panel/'.$class.'.php';
+        if (file_exists($classfile)) {
+            include $classfile;
+        }
     }
 }

@@ -1,14 +1,13 @@
 <?php
 /*
-Plugin Name: SRomanDev
+Plugin Name: Excursiopedia
 Plugin URI: http://URI_Of_Page_Describing_Plugin_and_Updates
-Description: Lesson
+Description: Earn with Excursiopedia.com!
 Version: 1.0
 Author: SRomanDev
 Author URI: http://URI_Of_The_Plugin_Author
 License: A "Slug" license name e.g. GPL2
-Text Domain: SRomanDev
-Domain Path: /localization/
+
 */
 if ( ! function_exists( 'add_action' ) ) exit;
 if( ! class_exists( 'SRomanDev' ) ) {
@@ -25,8 +24,6 @@ if( ! class_exists( 'SRomanDev' ) ) {
                 new SRControlPanel("admin");
                 else:
                     endif;
-            //error_log(SRInit::$textdomain);
-            //error_log(__("Hello world", SRInit::$textdomain));
         }
         //Активация плагина
         public static function SRPluginActivation(){

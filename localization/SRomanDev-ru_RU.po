@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SRomanDev v0.0.1\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2015-07-18 00:08+0300\n"
+"POT-Creation-Date: 2015-07-18 00:55+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: SRomanDev <sromandev@gmail.com>\n"
 "Language-Team: SRomanDev <sromandev@gmail.com>\n"
@@ -23,15 +23,24 @@ msgstr ""
 "X-Generator: Poedit 1.5.4\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: includes/SRControlPanel.php:21
+#: includes/control_panel/SRControlPanel.php:30
 msgctxt "add_menu_page page title"
-msgid "Test"
-msgstr "Тест"
+msgid "Excursiopedia"
+msgstr "Excursiopedia"
 
-#: includes/SRControlPanel.php:22
+#: includes/control_panel/SRControlPanel.php:31
 msgctxt "add_menu_page menu title"
-msgid "Test"
-msgstr "Тест"
+msgid "Excursiopedia"
+msgstr "Excursiopedia"
 
-#~ msgid "Hello world"
-#~ msgstr "Привет мир"
+#: includes/views/SRExcursiopediaPanelView.php:2
+msgid "Hello world"
+msgstr "Привет мир"
+
+#~ msgctxt "add_menu_page page title"
+#~ msgid "Test"
+#~ msgstr "Тест"
+
+#~ msgctxt "add_menu_page menu title"
+#~ msgid "Test"
+#~ msgstr "Тест"
