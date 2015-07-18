@@ -22,12 +22,27 @@ if( ! class_exists( 'SRomanDev' ) ) {
             new SRLocalization();
             if ( is_admin() ) :
                 new SRControlPanel("admin");
+                new SRSettings();
                 else:
                     endif;
+            //error_log(print_r(get_option(SRInit::$option_name), TRUE));
         }
         //Активация плагина
         public static function SRPluginActivation(){
-            error_log("Активация плагина");
+            //error_log("Активация плагина");
+            /**
+             * get_option( $option, $default );
+             * Получает значение указанной настройки (опции).
+             * Проверим существуют настройки или нет если не
+             * сущствует создадим по умолчанию
+             */
+            if( ! get_option( SRInit::$option_name ) ){
+                /**
+                 * update_option( $option_name, $newvalue, $autoload );
+                 * Обновляет значение настройки (опции) в Базе Данных.
+                 */
+                update_option( SRInit::$option_name, SRDefault::srDefaultOptions() );
+            }
         }
         //Деактивация плагина
         public static function SRPluginDeactivation(){
@@ -35,7 +50,12 @@ if( ! class_exists( 'SRomanDev' ) ) {
         }
         //Удаление плагина
         public static function SRPluginUninstall(){
-            error_log("Удаление плагина");
+            //error_log("Удаление плагина");
+            /**
+             * delete_option($name);
+             * Удаляет настройки (запись из таблицы wp_options в БД).
+             */
+            delete_option( SRInit::$option_name );
         }
     }
 }

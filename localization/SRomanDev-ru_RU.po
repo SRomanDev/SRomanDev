@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SRomanDev v0.0.1\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2015-07-18 00:55+0300\n"
+"POT-Creation-Date: 2015-07-18 15:31+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: SRomanDev <sromandev@gmail.com>\n"
 "Language-Team: SRomanDev <sromandev@gmail.com>\n"
@@ -23,6 +23,39 @@ msgstr ""
 "X-Generator: Poedit 1.5.4\n"
 "X-Poedit-SearchPath-0: .\n"
 
+#: includes/SRSettings.php:42
+msgctxt "settings_fields"
+msgid "Name"
+msgstr "Имя"
+
+#: includes/SRSettings.php:46
+msgctxt "settings_fields"
+msgid "Email"
+msgstr "Email"
+
+#: includes/SRSettings.php:50
+msgctxt "settings_fields"
+msgid "Affiliate Key"
+msgstr "Affiliate Key"
+
+#: includes/SRSettings.php:54
+msgctxt "settings_fields"
+msgid "Api Key"
+msgstr "Api Key"
+
+#: includes/SRSettings.php:58
+msgctxt "settings_fields"
+msgid "Localization"
+msgstr "Локализация"
+
+#: includes/SRFields.php:48
+msgid "Russian"
+msgstr "Русская"
+
+#: includes/SRFields.php:51
+msgid "English"
+msgstr "Английская "
+
 #: includes/control_panel/SRControlPanel.php:30
 msgctxt "add_menu_page page title"
 msgid "Excursiopedia"
@@ -33,9 +66,12 @@ msgctxt "add_menu_page menu title"
 msgid "Excursiopedia"
 msgstr "Excursiopedia"
 
-#: includes/views/SRExcursiopediaPanelView.php:2
-msgid "Hello world"
-msgstr "Привет мир"
+#: includes/views/SRExcursiopediaPanelView.php:33
+msgid "Save changes"
+msgstr "Сохранить изменения"
+
+#~ msgid "Hello world"
+#~ msgstr "Привет мир"
 
 #~ msgctxt "add_menu_page page title"
 #~ msgid "Test"
