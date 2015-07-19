@@ -17,9 +17,33 @@ if( ! class_exists( 'SRomanDev' ) ) {
      * Class SRomanDev
      */
     final class SRomanDev{
+        public $SRRequestApi;
         public function __construct(){
             new SRInit(__FILE__);
             new SRLocalization();
+            $this->SRRequestApi = new SRRequestApi();
+            /*
+             * error_log(print_r($this->SRRequestApi->getActivities(), true));
+             * error_log(print_r($this->SRRequestApi->getActivitiesID(array('id' => 1)), true));
+             * error_log(print_r($this->SRRequestApi->getCategories(array('id' => 1)), true));
+             * error_log(print_r($this->SRRequestApi->getCities(array('page' => false, 'limit' => false,
+                'name' => 'Ки')),true));
+             * error_log(print_r($this->SRRequestApi->getCitiesID(array('id' =>false)), true));
+             * error_log(print_r($this->SRRequestApi->getCitiesID(array('id' => 1)), true));
+             * error_log(print_r($this->SRRequestApi->getCountries(), true));
+             * error_log(print_r($this->SRRequestApi->getCountriesID(array('id' => 1)), true));
+             * error_log(print_r($this->SRRequestApi->getDiscussions(), true));
+             * error_log(print_r($this->SRRequestApi->getDiscussionsID(array('id' => 17)), true));
+             * error_log(print_r($this->SRRequestApi->getOrders(array('id' => 1)), true));
+             * error_log(print_r($this->SRRequestApi->getProductCategories(), true));
+             * error_log(print_r($this->SRRequestApi->getProducts(), true));
+             * error_log(print_r($this->SRRequestApi->getProductsID(array('id' => 17)), true));
+             * error_log(print_r($this->SRRequestApi->getRegions(), true));
+             * error_log(print_r($this->SRRequestApi->getRegionsID(array('id' => 1)), true));
+             * error_log(print_r($this->SRRequestApi->getUsersID(array('id' => 123)), true));
+            */
+
+
             if ( is_admin() ) :
                 new SRControlPanel("admin");
                 new SRSettings();

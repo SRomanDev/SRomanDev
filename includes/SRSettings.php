@@ -1,6 +1,7 @@
 <?php
 if ( ! function_exists( 'add_action' ) ) exit;
 require_once SRInit::$path.'/includes/SRAutoloader.php';
+SRAutoloader::init();
 class SRSettings {
     //Поля
     public static $SRFields;

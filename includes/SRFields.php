@@ -1,7 +1,7 @@
 <?php
 if ( ! function_exists( 'add_action' ) ) exit;
 require_once SRInit::$path.'/includes/SRAutoloader.php';
-
+SRAutoloader::init();
 class SRFields {
     public $options;
     public function __construct(){
@@ -11,28 +11,28 @@ class SRFields {
         ?>
         <input type="text" class=""
                name="<?php echo SRInit::$option_name;?>[config][name]"
-               value="<?php echo esc_attr($this->options['name']['name']) ?>" />
+               value="<?php echo esc_attr($this->options['config']['name']) ?>" />
         <?php
     }
     public function srFieldEmail(){
         ?>
         <input type="text" class=""
                name="<?php echo SRInit::$option_name;?>[config][email]"
-               value="<?php echo esc_attr($this->options['name']['email']) ?>" />
+               value="<?php echo esc_attr($this->options['config']['email']) ?>" />
         <?php
     }
     public function srFieldAffiliateKey(){
         ?>
         <input type="text" class=""
                name="<?php echo SRInit::$option_name;?>[config][affiliate_key]"
-               value="<?php echo esc_attr($this->options['name']['affiliate_key']) ?>" />
+               value="<?php echo esc_attr($this->options['config']['affiliate_key']) ?>" />
         <?php
     }
     public function srFieldApiKey(){
         ?>
         <input type="text" class=""
                name="<?php echo SRInit::$option_name;?>[config][api_key]"
-               value="<?php echo esc_attr($this->options['name']['api_key']) ?>" />
+               value="<?php echo esc_attr($this->options['config']['api_key']) ?>" />
         <?php
     }
     public function srFieldLocal(){
