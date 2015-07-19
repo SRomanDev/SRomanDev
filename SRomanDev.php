@@ -18,10 +18,12 @@ if( ! class_exists( 'SRomanDev' ) ) {
      */
     final class SRomanDev{
         public $SRRequestApi;
+        public $SRAdminNotice;
         public function __construct(){
             new SRInit(__FILE__);
             new SRLocalization();
-            $this->SRRequestApi = new SRRequestApi();
+            $this->SRAdminNotice = new SRAdminNotice();
+            $this->SRRequestApi = new SRRequestApi($this->SRAdminNotice);
             /*
              * error_log(print_r($this->SRRequestApi->getActivities(), true));
              * error_log(print_r($this->SRRequestApi->getActivitiesID(array('id' => 1)), true));

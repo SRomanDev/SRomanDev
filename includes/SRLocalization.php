@@ -9,6 +9,7 @@ class SRLocalization {
         // init [хук-событие] с версии WP 1.5.2
         // Событие срабатывает после того, как WordPress полностью загружен,
         // но до того, как любые header заголовки были отправлены.
+        //plugins_loaded
         add_action('init', array(&$this, 'srLocalization'));
     }
     public function srLocalization(){

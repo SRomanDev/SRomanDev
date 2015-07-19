@@ -10,23 +10,59 @@ class SRRequestApi {
     protected $api_key;
     protected $api_url;
     protected $lang;
-    public function  __construct(){
+    public function  __construct($SRAdminNotice){
         $this->options = get_option(SRInit::$option_name);
         if(empty($this->options)){
             // Ошибка настройки не заданны
             $this->status = false;
+            $SRAdminNotice->srPush(get_class($this), array(
+                'class_notice' => 'error',
+                'title_notice' => __('Plugin SRomanDev returned an error', SRInit::$textdomain),
+                'message_notice' => __('The settings are not tasks', SRInit::$textdomain),
+                'link_notice' => array(
+                    'url' => admin_url('admin.php?page='.SRInit::$textdomain ),
+                    'title' => __('Set the options', SRInit::$textdomain)
+                ),
+            ));
         }elseif( ! isset( $this->options['config']['email'] ) ||
             empty( $this->options['config']['email'] )){
             // Ошибка Email не задан
             $this->status = false;
+            $SRAdminNotice->srPush(get_class($this), array(
+                'class_notice' => 'error',
+                'title_notice' => __('Plugin SRomanDev returned an error', SRInit::$textdomain),
+                'message_notice' => __('Email not set', SRInit::$textdomain),
+                'link_notice' => array(
+                    'url' => admin_url('admin.php?page='.SRInit::$textdomain ),
+                    'title' => __('Set the options', SRInit::$textdomain)
+                ),
+            ));
         }elseif( ! isset( $this->options['config']['affiliate_key'] ) ||
             empty( $this->options['config']['affiliate_key'] )){
-            // Ошибка Email не задан
+            // Ошибка affiliate_key не задан
             $this->status = false;
+            $SRAdminNotice->srPush(get_class($this), array(
+                'class_notice' => 'error',
+                'title_notice' => __('Plugin SRomanDev returned an error', SRInit::$textdomain),
+                'message_notice' => __('Affiliate Key not set', SRInit::$textdomain),
+                'link_notice' => array(
+                    'url' => admin_url('admin.php?page='.SRInit::$textdomain ),
+                    'title' => __('Set the options', SRInit::$textdomain)
+                ),
+            ));
         }elseif( ! isset( $this->options['config']['api_key'] ) ||
             empty( $this->options['config']['api_key'] )){
             // Ошибка api key не задан
             $this->status = false;
+            $SRAdminNotice->srPush(get_class($this), array(
+                'class_notice' => 'error',
+                'title_notice' => __('Plugin SRomanDev returned an error', SRInit::$textdomain),
+                'message_notice' => __('Api Key not set', SRInit::$textdomain),
+                'link_notice' => array(
+                    'url' => admin_url('admin.php?page='.SRInit::$textdomain ),
+                    'title' => __('Set the options', SRInit::$textdomain)
+                ),
+            ));
         }else{
             $this->status = true;
             $this->email = $this->options['config']['email'];

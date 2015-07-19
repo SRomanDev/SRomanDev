@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SRomanDev v0.0.1\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2015-07-18 15:31+0300\n"
+"POT-Creation-Date: 2015-07-20 00:21+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: SRomanDev <sromandev@gmail.com>\n"
 "Language-Team: SRomanDev <sromandev@gmail.com>\n"
@@ -23,27 +23,27 @@ msgstr ""
 "X-Generator: Poedit 1.5.4\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: includes/SRSettings.php:42
+#: includes/SRSettings.php:43
 msgctxt "settings_fields"
 msgid "Name"
 msgstr "Имя"
 
-#: includes/SRSettings.php:46
+#: includes/SRSettings.php:47
 msgctxt "settings_fields"
 msgid "Email"
 msgstr "Email"
 
-#: includes/SRSettings.php:50
+#: includes/SRSettings.php:51
 msgctxt "settings_fields"
 msgid "Affiliate Key"
 msgstr "Affiliate Key"
 
-#: includes/SRSettings.php:54
+#: includes/SRSettings.php:55
 msgctxt "settings_fields"
 msgid "Api Key"
 msgstr "Api Key"
 
-#: includes/SRSettings.php:58
+#: includes/SRSettings.php:59
 msgctxt "settings_fields"
 msgid "Localization"
 msgstr "Локализация"
@@ -55,6 +55,32 @@ msgstr "Русская"
 #: includes/SRFields.php:51
 msgid "English"
 msgstr "Английская "
+
+#: includes/SRRequestApi.php:20 includes/SRRequestApi.php:33
+#: includes/SRRequestApi.php:46 includes/SRRequestApi.php:59
+msgid "Plugin SRomanDev returned an error"
+msgstr "Плагин SRomanDev вернул ошибку"
+
+#: includes/SRRequestApi.php:21
+msgid "The settings are not tasks"
+msgstr "Настройки не заданны"
+
+#: includes/SRRequestApi.php:24 includes/SRRequestApi.php:37
+#: includes/SRRequestApi.php:50 includes/SRRequestApi.php:63
+msgid "Set the options"
+msgstr "Установите настройки"
+
+#: includes/SRRequestApi.php:34
+msgid "Email not set"
+msgstr "Email не задан"
+
+#: includes/SRRequestApi.php:47
+msgid "Affiliate Key not set"
+msgstr "Affiliate Key не задан"
+
+#: includes/SRRequestApi.php:60
+msgid "Api Key not set"
+msgstr "Api Key не задан"
 
 #: includes/control_panel/SRControlPanel.php:30
 msgctxt "add_menu_page page title"
